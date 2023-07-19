@@ -1,0 +1,277 @@
+Extension: LegalAction
+Id: legal-action
+Title: "Extension : Practitioner Work History"
+Description: "extension to show work history"
+* ^context[+].type = #element
+* ^context[=].expression = "Practitioner"
+* extension contains
+   malpracticeClaim 0..* and 
+   saction 0..*
+* extension[malpracticeClaim] ^short = "Malpractice Claim"
+* extension[malpracticeClaim].value[x] only Reference(Claim)
+* extension[saction] ^short = "Restriction Sanction"
+* extension[saction].value[x] only Reference(Consent)
+
+Extension: PrimarySource
+Id: primary-source
+Title: "Extension : Primary Source Verification Information"
+Description: "Primary Source Verification Information"
+* ^context[+].type = #element
+* ^context[=].expression = "Practitioner"
+* ^context[=].expression = "Claim"
+* ^context[=].expression = "Consent"
+* ^context[=].expression = "PractitionerRole"
+* extension contains
+   url 0..1 and 
+   lastPublished 1..1
+* extension[url] ^short = "url"
+* extension[url].value[x] only string
+* extension[lastPublished] ^short = "lastpublished"
+* extension[lastPublished].value[x] only dateTime
+
+Profile: DQPSVPractitionerLegalAction
+Parent: Practitioner
+Id: DQ-PSV-Practitioner-Legal-Action
+Title: "Data Quality and Primary Source Verfication Practitioner"
+* extension contains LegalAction named legalAction 0..1
+* extension contains PrimarySource named primarySource 0..1
+
+
+Profile: DQPSVMalpracticeCliam
+Parent: Claim
+Id: DQ-PSV-malpractice-claim
+* extension contains PrimarySource named primarySource 0..1
+
+Profile: DQPSVSanction
+Parent: Consent
+Id: DQ-PSV-santion
+* extension contains PrimarySource named primarySource 0..1
+
+Profile: DQPSVWorkHistory
+Parent: PractitionerRole
+* extension contains PrimarySource named primarySource 0..1
+
+Instance: MockedCliamPatient
+InstanceOf: Patient
+Usage: #example
+* identifier.use = #offical
+* identifier.value = "8bd279af-125a-4318-b461-7ADYA78T7890"
+
+Instance: MockMalpracticeProviderOrganization
+InstanceOf: Organization
+Usage: #example
+* identifier.use = #offical
+* identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA90"
+
+Instance: InsuranceCoverage
+InstanceOf: Coverage
+Usage: #example
+* identifier.use = #offical
+* identifier.type = #insurancecoverage
+* identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
+* status = #active
+* payor = Reference(MalpracticeProviderOrganization)
+* beneficiary = Reference(MockedCliamPatient)
+
+Instance: MalpracticeClaim1
+InstanceOf: DQPSVMalpracticeCliam
+Usage: #example
+* identifier.use = #offical
+* identifier.type = #malpractice
+* identifier.value = "8bd279af-125a-4318-b461-SD7A607607W"
+* status = #active
+* type = #malpractice
+* patient = Reference(StubbedCliamPatient)
+* use = #claim
+* priority = #normal
+* created = "2000-12-19"
+* provider = Reference(MalpracticeProviderOrganization)
+* insurance.sequence = 1
+* insurance.focal = false
+* insurance.coverage = Reference(InsuranceCoverage)
+* extension[primarySource].extension[url].valueString = "http://example.url.com/Malpractice/claims"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+
+
+Instance: Sanction-vhdir-restriction
+InstanceOf: DQPSVSanction
+Usage: #example
+* identifier.use = #offical
+* identifier.type = #sanction
+* identifier.value = "8bd279af-125a-4318-b461-PSOD8YFAYTS"
+* status = #active
+* scope = #malpractice
+* category = #malpractice
+* extension[primarySource].extension[url].valueString = "http://example.url.com/sanctions"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+
+
+Instance: QulificationDEAOrganization
+InstanceOf: Organization
+Usage: #example
+* identifier.use = #offical
+* identifier.value = "fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
+* name = "DEA"
+
+Instance: QulificationDCSOrganization
+InstanceOf: Organization
+Usage: #example
+* identifier.use = #offical
+* identifier.value = "25560a5d-1c71-4af2-86a6-46acb9daa102"
+* name = "DCS-Florida"
+
+
+Instance: QulificationTrainingOrganization
+InstanceOf: Organization
+Usage: #example
+* identifier.use = #offical
+* identifier.value = "c418c853-bf5e-47e1-8889-fb76d3997e7e"
+* name = "We-Train-Docs"
+
+
+Instance: thePractitioner
+InstanceOf: DQPSVPractitionerLegalAction
+Usage: #example
+* identifier[+].use = #offical
+* identifier[=].id = "8bd279af-125a-4318-b461-sda0867067s"
+* name.family = "Doe"
+* name.given = "John"
+* name.prefix = "DO"
+* extension[legalAction].extension[malpracticeClaim].valueReference = Reference(MalpracticeClaim1)
+* extension[legalAction].extension[saction].valueReference = Reference(Sanction-vhdir-restriction)
+* extension[primarySource].extension[url].valueString = "http://example.url.com/practitioner"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+//DEA Qualification
+* qualification[+].identifier.id = "f755ea67-6c33-4dc2-9a1d-6b480d9e558c"
+* qualification[=].identifier.value = "DEA-NUMBER:8s997867585"
+* qualification[=].code = #DEACertification
+* qualification[=].period.start = "2023-01-01"
+* qualification[=].period.end = "2025-01-01"
+* qualification[=].issuer = Reference(QulificationDEAOrganization)
+//DCS Qualification
+* qualification[+].identifier.id = "af173c79-48dd-4edf-88e5-6062993477f0"
+* qualification[=].identifier.value = "DCS-NUMBER:sd098-a7a686"
+* qualification[=].code = #DCSCertification
+* qualification[=].period.start = "2023-01-01"
+* qualification[=].period.end = "2030-01-01"
+* qualification[=].issuer = Reference(QulificationDCSOrganization)
+//Training
+* qualification[+].identifier.id = "0815108c-8b80-49b4-b4ee-cb42f1f2448e"
+* qualification[=].identifier.value = "CPR-Training For Doctors 2020"
+* qualification[=].code = #CPRTraining
+* qualification[=].period.start = "2020-01-01"
+* qualification[=].period.end = "2050-01-01"
+* qualification[=].issuer = Reference(QulificationTrainingOrganization)
+
+
+//WorkHISTORY
+
+Instance: Employer0
+InstanceOf: Organization
+Usage: #example
+* identifier[+].use = #offical
+* identifier[=].id = "73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
+* name = "Hospital employer"
+
+
+
+Instance: Employer1
+InstanceOf: Organization
+Usage: #example
+* identifier[+].use = #offical
+* identifier[=].id = "7f1dd829-db66-4312-a6a2-46283ad29f27"
+* name = "Hospital employer"
+
+
+Instance: Employer2
+InstanceOf: Organization
+Usage: #example
+* identifier[+].use = #offical
+* identifier[=].id = "4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
+* name = "Hospital employer"
+
+
+Instance: WorkHistory0
+InstanceOf: DQPSVWorkHistory
+Usage: #example
+* identifier.id = "3a9730f6-b0ff-470b-919b-e555057c5c5c"
+* identifier.use = #official
+* practitioner = Reference(thePractitioner)
+* organization = Reference(Employer0)
+* period.start = "1990-01-01"
+* period.end = "2000-12-19"
+* code = #doctor
+* extension[primarySource].extension[url].valueString = "http://example.url.com/workhistory"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+
+
+Instance: WorkHistory1
+InstanceOf: DQPSVWorkHistory
+Usage: #example
+* identifier.id = "13314c80-b5cf-4606-bc6a-07d849433e7a"
+* identifier.use = #official
+* practitioner = Reference(thePractitioner)
+* organization = Reference(Employer1)
+* period.start = "2001-01-01"
+* period.end = "2010-12-23"
+* code = #17561000
+* extension[primarySource].extension[url].valueString = "http://example.url.com/workhistory"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+
+Instance: WorkHistory2
+InstanceOf: DQPSVWorkHistory
+Usage: #example
+* identifier.id = "62536813-4dad-48ce-aac2-5b88abdaa913"
+* identifier.use = #official
+* practitioner = Reference(thePractitioner)
+* organization = Reference(Employer1)
+* period.start = "2010-01-01"
+* code = #24590004
+* extension[primarySource].extension[url].valueString = "http://example.url.com/workhistory"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+
+
+//Resource Bundle
+Instance: DQPSVPractitionerLegalActionResourceBundle
+InstanceOf: Bundle
+Usage: #example
+* identifier.system = "http://example.org"
+* identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
+* type = #document
+* timestamp = "2023-03-09T14:30:00+01:00"
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-sda0867067s"
+* entry[=].resource = thePractitioner
+//DEA Organization
+* entry[+].fullUrl = "urn:uuid:fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
+* entry[=].resource = QulificationDEAOrganization
+//DCS Qualification
+* entry[+].fullUrl = "urn:uuid:25560a5d-1c71-4af2-86a6-46acb9daa102"
+* entry[=].resource = QulificationDCSOrganization
+//Training Qualification
+* entry[+].fullUrl = "urn:uuid:c418c853-bf5e-47e1-8889-fb76d3997e7e"
+* entry[=].resource = QulificationTrainingOrganization
+
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-PSOD8YFAYTS"
+* entry[=].resource = Sanction-vhdir-restriction
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-SD7A607607W"
+* entry[=].resource = MalpracticeClaim1
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-7ADYA78TA7T"
+* entry[=].resource = InsuranceCoverage
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
+* entry[=].resource = MockMalpracticeProviderOrganization
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-SD6AA765A657"
+* entry[=].resource = MockedCliamPatient
+//employer
+* entry[+].fullUrl = "urn:uuid:73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
+* entry[=].resource = Employer0
+* entry[+].fullUrl = "urn:uuid:7f1dd829-db66-4312-a6a2-46283ad29f27"
+* entry[=].resource = Employer1
+* entry[+].fullUrl = "urn:uuid:4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
+* entry[=].resource = Employer2
+//work history
+* entry[+].fullUrl = "urn:uuid:3a9730f6-b0ff-470b-919b-e555057c5c5c"
+* entry[=].resource = WorkHistory0
+* entry[+].fullUrl = "urn:uuid:13314c80-b5cf-4606-bc6a-07d849433e7a"
+* entry[=].resource = WorkHistory1
+* entry[+].fullUrl = "urn:uuid:62536813-4dad-48ce-aac2-5b88abdaa913"
+* entry[=].resource = WorkHistory2
