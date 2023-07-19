@@ -19,16 +19,20 @@ Id: DQ-PSV-Practitioner-Legal-Action
 Title: "Data Quality and Primary Source Verfication Practitioner"
 * extension contains LegalAction named legalAction 0..1
 
-Profile: StubbedCliamPatient
-Parent: Patient
-Id: stubbed-cliam-patient
+Instance: MockedCliamPatient
+InstanceOf: Patient
+Usage: #example
 
-Profile: MalpracticeProviderOrganization
-Parent: Organization
-Id: malpractice-provider-organization
+Instance: MockMalpracticeProviderOrganization
+InstanceOf: Organization
+Usage: #example
 
-Profile: InsuranceCoverage
-Parent: Coverage
+Instance: InsuranceCoverage
+InstanceOf: Coverage
+Usage: #example
+* status = #active
+* payor = Reference(MalpracticeProviderOrganization)
+* beneficiary = Reference(MockedCliamPatient)
 
 Instance: MalpracticeClaim1
 InstanceOf: Claim
