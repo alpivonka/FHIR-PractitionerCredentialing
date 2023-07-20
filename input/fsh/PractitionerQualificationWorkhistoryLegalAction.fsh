@@ -6,6 +6,7 @@ Id: DQ-PSV-Practitioner-Legal-Action
 Title: "Data Quality and Primary Source Verfication Practitioner"
 * extension contains LegalAction named legalAction 0..1
 * extension contains PrimarySource named primarySource 0..1
+* extension contains MalpracticeCoverage named malpracticeCoverage 0..1
 
 
 Profile: DQPSVMalpracticeCliam
@@ -24,6 +25,14 @@ Parent: PractitionerRole
 
 
 //Extensions
+Extension: MalpracticeCoverage
+Id:        malpractice-coverage
+Title:     "Extension: proof of malpractice insurance coverage"
+Description: "Extension: proof of malpractice insurance coverage"
+* ^context[+].type = #element
+* ^context[=].expression = "Practitioner"
+* value[x] only Reference(Coverage)
+
 Extension: LegalAction
 Id: legal-action
 Title: "Extension : Practitioner Work History"
@@ -149,8 +158,12 @@ Usage: #example
 * name.family = "Doe"
 * name.given = "John"
 * name.prefix = "DO"
+//Legal Actions
 * extension[legalAction].extension[action][+].valueReference = Reference(MalpracticeClaim1)
 * extension[legalAction].extension[action][+].valueReference = Reference(Sanction-vhdir-restriction)
+//Malpractice Insurance Coverage
+* extension[malpracticeCoverage].valueReference = Reference(MalpracticeInsuranceCoverage)
+//Primary Source
 * extension[primarySource].extension[url].valueString = "http://example.url.com/practitioner"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
 //DEA Qualification
