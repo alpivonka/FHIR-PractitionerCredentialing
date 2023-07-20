@@ -57,18 +57,21 @@ Description: "Primary Source Verification Information"
 Instance: MockedCliamPatient
 InstanceOf: Patient
 Usage: #example
+* id = "MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890"
 * identifier.use = #offical
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78T7890"
 
 Instance: MockMalpracticeProviderOrganization
 InstanceOf: Organization
 Usage: #example
+* id = "MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90"
 * identifier.use = #offical
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA90"
 
 Instance: MalpracticeInsuranceCoverage
 InstanceOf: Coverage
 Usage: #example
+* id = "MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"
 * identifier.use = #offical
 * identifier.type = #malpracticeinsurancecoverage
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
@@ -79,16 +82,17 @@ Usage: #example
 Instance: MalpracticeClaim1
 InstanceOf: DQPSVMalpracticeCliam
 Usage: #example
+* id = "MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"
 * identifier.use = #offical
 * identifier.type = #malpractice
 * identifier.value = "8bd279af-125a-4318-b461-SD7A607607W"
 * status = #active
 * type = #malpractice
-* patient = Reference(StubbedCliamPatient)
+* patient = Reference(MockedCliamPatient)
 * use = #claim
 * priority = #normal
 * created = "2000-12-19"
-* provider = Reference(MalpracticeProviderOrganization)
+* provider = Reference(MockMalpracticeProviderOrganization)
 * insurance.sequence = 1
 * insurance.focal = false
 * insurance.coverage = Reference(MalpracticeInsuranceCoverage)
@@ -99,6 +103,7 @@ Usage: #example
 Instance: Sanction-vhdir-restriction
 InstanceOf: DQPSVSanction
 Usage: #example
+* id = "Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * identifier.use = #offical
 * identifier.type = #sanction
 * identifier.value = "8bd279af-125a-4318-b461-PSOD8YFAYTS"
@@ -112,6 +117,7 @@ Usage: #example
 Instance: QulificationDEAOrganization
 InstanceOf: Organization
 Usage: #example
+* id = "QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
 * identifier.use = #offical
 * identifier.value = "fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
 * name = "DEA"
@@ -119,6 +125,7 @@ Usage: #example
 Instance: QulificationDCSOrganization
 InstanceOf: Organization
 Usage: #example
+* id = "QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102"
 * identifier.use = #offical
 * identifier.value = "25560a5d-1c71-4af2-86a6-46acb9daa102"
 * name = "DCS-Florida"
@@ -127,6 +134,7 @@ Usage: #example
 Instance: QulificationTrainingOrganization
 InstanceOf: Organization
 Usage: #example
+* id = "QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e"
 * identifier.use = #offical
 * identifier.value = "c418c853-bf5e-47e1-8889-fb76d3997e7e"
 * name = "We-Train-Docs"
@@ -135,6 +143,7 @@ Usage: #example
 Instance: thePractitioner
 InstanceOf: DQPSVPractitionerLegalAction
 Usage: #example
+* id = "thePractitioner-8bd279af-125a-4318-b461-sda0867067s"
 * identifier[+].use = #offical
 * identifier[=].id = "8bd279af-125a-4318-b461-sda0867067s"
 * name.family = "Doe"
@@ -172,6 +181,7 @@ Usage: #example
 Instance: Employer0
 InstanceOf: Organization
 Usage: #example
+* id = "Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
 * identifier[+].use = #offical
 * identifier[=].id = "73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
 * name = "Hospital employer"
@@ -181,6 +191,7 @@ Usage: #example
 Instance: Employer1
 InstanceOf: Organization
 Usage: #example
+* id = "Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27"
 * identifier[+].use = #offical
 * identifier[=].id = "7f1dd829-db66-4312-a6a2-46283ad29f27"
 * name = "Hospital employer"
@@ -189,6 +200,7 @@ Usage: #example
 Instance: Employer2
 InstanceOf: Organization
 Usage: #example
+* id = "Employer2-4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
 * identifier[+].use = #offical
 * identifier[=].id = "4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
 * name = "Hospital employer"
@@ -197,6 +209,7 @@ Usage: #example
 Instance: WorkHistory0
 InstanceOf: DQPSVWorkHistory
 Usage: #example
+* id = "WorkHistory0-3a9730f6-b0ff-470b-919b-e555057c5c5c"
 * identifier.id = "3a9730f6-b0ff-470b-919b-e555057c5c5c"
 * identifier.use = #official
 * practitioner = Reference(thePractitioner)
@@ -211,6 +224,7 @@ Usage: #example
 Instance: WorkHistory1
 InstanceOf: DQPSVWorkHistory
 Usage: #example
+* id = "WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a"
 * identifier.id = "13314c80-b5cf-4606-bc6a-07d849433e7a"
 * identifier.use = #official
 * practitioner = Reference(thePractitioner)
@@ -224,6 +238,7 @@ Usage: #example
 Instance: WorkHistory2
 InstanceOf: DQPSVWorkHistory
 Usage: #example
+* id = "WorkHistory-62536813-4dad-48ce-aac2-5b88abdaa913"
 * identifier.id = "62536813-4dad-48ce-aac2-5b88abdaa913"
 * identifier.use = #official
 * practitioner = Reference(thePractitioner)
@@ -238,6 +253,7 @@ Usage: #example
 Instance: DQPSVPractitionerLegalActionResourceBundle
 InstanceOf: Bundle
 Usage: #example
+* id = "ResourceBundle-ba91c64b-f30c-4137-a484-34bbba5e8804"
 * identifier.system = "http://example.org"
 * identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
 * type = #document
@@ -255,14 +271,14 @@ Usage: #example
 * entry[=].resource = QulificationTrainingOrganization
 
 //Legal Actions
-* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-PSOD8YFAYTS"
 //Sanction
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * entry[=].resource = Sanction-vhdir-restriction
-* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-SD7A607607W"
 // Malpractice claim
+* entry[+].fullUrl = "urn:uuid:MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"
 * entry[=].resource = MalpracticeClaim1
-* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-7ADYA78TA7T"
 //Malpractice Coverage
+* entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-7ADYA78TA7T"
 * entry[=].resource = MalpracticeInsuranceCoverage
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
 * entry[=].resource = MockMalpracticeProviderOrganization
