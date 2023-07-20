@@ -31,12 +31,9 @@ Description: "extension to show work history"
 * ^context[+].type = #element
 * ^context[=].expression = "Practitioner"
 * extension contains
-   malpracticeClaim 0..* and 
-   saction 0..*
-* extension[malpracticeClaim] ^short = "Malpractice Claim"
-* extension[malpracticeClaim].value[x] only Reference(Claim)
-* extension[saction] ^short = "Restriction Sanction"
-* extension[saction].value[x] only Reference(Consent)
+   action 0..* 
+* extension[action] ^short = "The legal Action Reference Claim or Consent"
+* extension[action].value[x] only Reference(Claim or Consent)
 
 Extension: PrimarySource
 Id: primary-source
@@ -143,8 +140,8 @@ Usage: #example
 * name.family = "Doe"
 * name.given = "John"
 * name.prefix = "DO"
-* extension[legalAction].extension[malpracticeClaim].valueReference = Reference(MalpracticeClaim1)
-* extension[legalAction].extension[saction].valueReference = Reference(Sanction-vhdir-restriction)
+* extension[legalAction].extension[action][+].valueReference = Reference(MalpracticeClaim1)
+* extension[legalAction].extension[action][+].valueReference = Reference(Sanction-vhdir-restriction)
 * extension[primarySource].extension[url].valueString = "http://example.url.com/practitioner"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
 //DEA Qualification
