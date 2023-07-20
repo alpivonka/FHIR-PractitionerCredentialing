@@ -117,10 +117,14 @@ Usage: #example
 * identifier.type = #sanction
 * identifier.value = "8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * status = #active
-* scope = #malpractice
-* category = #malpractice
+* scope = #sanction
+* category = #saction
 * extension[primarySource].extension[url].valueString = "http://example.url.com/sanctions"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* provision.type = #deny
+* provision.action = #morningRounds
+* provision.actor[+].reference = Reference(thePractitioner)
+* provision.actor[=].role = #doctor
 
 
 Instance: QulificationDEAOrganization
@@ -190,7 +194,6 @@ Usage: #example
 
 
 //Work History using HISTORY
-
 Instance: Employer0
 InstanceOf: Organization
 Usage: #example
