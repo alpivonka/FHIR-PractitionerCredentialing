@@ -1,17 +1,20 @@
 //Profiles
-
 Profile: DQPSVPractitionerLegalAction
 Parent: Practitioner
 Id: DQ-PSV-Practitioner-Legal-Action
 Title: "Data Quality and Primary Source Verfication Practitioner"
 * extension contains LegalAction named legalAction 0..1
-* extension contains PrimarySource named primarySource 0..1
 * extension contains MalpracticeCoverage named malpracticeCoverage 0..1
-
+* extension contains PrimarySource named primarySource 0..1
 
 Profile: DQPSVMalpracticeCliam
 Parent: Claim
 Id: DQ-PSV-malpractice-claim
+* extension contains PrimarySource named primarySource 0..1
+
+Profile: DQPSVMalpracticeCoverage
+Parent: Coverage
+Id: DQ-PSV-malpractice-coverage
 * extension contains PrimarySource named primarySource 0..1
 
 Profile: DQPSVSanction
@@ -35,12 +38,12 @@ Description: "Extension: proof of malpractice insurance coverage"
 
 Extension: LegalAction
 Id: legal-action
-Title: "Extension : Practitioner Work History"
-Description: "extension to show work history"
+Title: "Extension : Practitioner Legal Actions"
+Description: "Extension : Practitioner Legal Actions"
 * ^context[+].type = #element
 * ^context[=].expression = "Practitioner"
 * extension contains
-   action 0..* 
+   action 0..*
 * extension[action] ^short = "The legal Action Reference Claim or Consent"
 * extension[action].value[x] only Reference(Claim or Consent)
 
@@ -50,6 +53,7 @@ Title: "Extension : Primary Source Verification Information"
 Description: "Primary Source Verification Information"
 * ^context[+].type = #element
 * ^context[=].expression = "Practitioner"
+* ^context[=].expression = "Coverage"
 * ^context[=].expression = "Claim"
 * ^context[=].expression = "Consent"
 * ^context[=].expression = "PractitionerRole"
@@ -62,7 +66,7 @@ Description: "Primary Source Verification Information"
 * extension[lastPublished].value[x] only dateTime
 
 //Examples
-
+//MOCK DATA
 Instance: MockedCliamPatient
 InstanceOf: Patient
 Usage: #example
@@ -76,9 +80,9 @@ Usage: #example
 * id = "MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90"
 * identifier.use = #offical
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA90"
-
+//Examples
 Instance: MalpracticeInsuranceCoverage
-InstanceOf: Coverage
+InstanceOf: DQPSVMalpracticeCoverage
 Usage: #example
 * id = "MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"
 * identifier.use = #offical
@@ -87,6 +91,13 @@ Usage: #example
 * status = #active
 * payor = Reference(MalpracticeProviderOrganization)
 * beneficiary = Reference(MockedCliamPatient)
+* period.start = "1990-01-01"
+* period.end = "2025-01-01"
+* class[+].type = #malpracticeCoverage
+* class[=].name = "Medical Malpractice Insurance Mutual of Omaha"
+* class[=].value = "PolicyNumber: 667fd5a95a5"
+* extension[primarySource].extension[url].valueString = "http://example.url.com/Malpractice/coverage"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
 
 Instance: MalpracticeClaim1
 InstanceOf: DQPSVMalpracticeCliam
@@ -285,7 +296,6 @@ Usage: #example
 //Training Qualification
 * entry[+].fullUrl = "urn:uuid:c418c853-bf5e-47e1-8889-fb76d3997e7e"
 * entry[=].resource = QulificationTrainingOrganization
-
 //Legal Actions
 //Sanction
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-PSOD8YFAYTS"
