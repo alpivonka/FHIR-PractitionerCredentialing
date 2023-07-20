@@ -58,12 +58,15 @@ Description: "Primary Source Verification Information"
 * ^context[=].expression = "Consent"
 * ^context[=].expression = "PractitionerRole"
 * extension contains
-   url 0..1 and 
-   lastPublished 1..1
-* extension[url] ^short = "url"
-* extension[url].value[x] only string
+   verificationURL 0..1 and 
+   lastPublished 1..1 and
+   who 0..1
+* extension[verificationURL] ^short = "url"
+* extension[verificationURL].value[x] only string
 * extension[lastPublished] ^short = "lastpublished"
 * extension[lastPublished].value[x] only dateTime
+* extension[who] ^short = "lastpublished"
+* extension[who].value[x] only Reference(Organization)
 
 //Examples
 //MOCK DATA
@@ -80,6 +83,15 @@ Usage: #example
 * id = "MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90"
 * identifier.use = #offical
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA90"
+
+Instance: PrimarySourceOrganization
+InstanceOf: Organization
+Usage: #example
+* id = "PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002"
+* name = "PrimarySource Organization"
+* identifier.use = #offical
+* identifier.value = "f8881e4c-272a-11ee-be56-0242ac120002"
+
 //Examples
 Instance: MalpracticeInsuranceCoverage
 InstanceOf: DQPSVMalpracticeCoverage
@@ -96,8 +108,9 @@ Usage: #example
 * class[+].type = #malpracticeCoverage
 * class[=].name = "Medical Malpractice Insurance Mutual of Omaha"
 * class[=].value = "PolicyNumber: 667fd5a95a5"
-* extension[primarySource].extension[url].valueString = "http://example.url.com/Malpractice/coverage"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/Malpractice/coverage"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
 
 Instance: MalpracticeClaim1
 InstanceOf: DQPSVMalpracticeCliam
@@ -116,8 +129,9 @@ Usage: #example
 * insurance.sequence = 1
 * insurance.focal = false
 * insurance.coverage = Reference(MalpracticeInsuranceCoverage)
-* extension[primarySource].extension[url].valueString = "http://example.url.com/Malpractice/claims"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/Malpractice/claims"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
 
 
 Instance: Sanction-vhdir-restriction
@@ -130,8 +144,9 @@ Usage: #example
 * status = #active
 * scope = #sanction
 * category = #saction
-* extension[primarySource].extension[url].valueString = "http://example.url.com/sanctions"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/sanctions"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
 * provision.type = #deny
 * provision.action = #morningRounds
 * provision.actor[+].reference = Reference(thePractitioner)
@@ -179,8 +194,10 @@ Usage: #example
 //Malpractice Insurance Coverage
 * extension[malpracticeCoverage].valueReference = Reference(MalpracticeInsuranceCoverage)
 //Primary Source
-* extension[primarySource].extension[url].valueString = "http://example.url.com/practitioner"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/practitioner"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
+
 //DEA Qualification
 * qualification[+].identifier.id = "f755ea67-6c33-4dc2-9a1d-6b480d9e558c"
 * qualification[=].identifier.value = "DEA-NUMBER:8s997867585"
@@ -244,8 +261,10 @@ Usage: #example
 * period.start = "1990-01-01"
 * period.end = "2000-12-19"
 * code = #doctor
-* extension[primarySource].extension[url].valueString = "http://example.url.com/workhistory"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/workhistory"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
+
 
 
 Instance: WorkHistory1
@@ -259,8 +278,10 @@ Usage: #example
 * period.start = "2001-01-01"
 * period.end = "2010-12-23"
 * code = #17561000
-* extension[primarySource].extension[url].valueString = "http://example.url.com/workhistory"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/workhistory"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
+
 
 Instance: WorkHistory2
 InstanceOf: DQPSVWorkHistory
@@ -272,8 +293,10 @@ Usage: #example
 * organization = Reference(Employer1)
 * period.start = "2010-01-01"
 * code = #24590004
-* extension[primarySource].extension[url].valueString = "http://example.url.com/workhistory"
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/workhistory"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
+
 
 
 //Resource Bundle
@@ -296,6 +319,10 @@ Usage: #example
 //Training Qualification
 * entry[+].fullUrl = "urn:uuid:c418c853-bf5e-47e1-8889-fb76d3997e7e"
 * entry[=].resource = QulificationTrainingOrganization
+//PrimarySourceOrganization
+* entry[+].fullUrl = "urn:uuid:f8881e4c-272a-11ee-be56-0242ac120002"
+* entry[=].resource = PrimarySourceOrganization
+
 //Legal Actions
 //Sanction
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-PSOD8YFAYTS"
