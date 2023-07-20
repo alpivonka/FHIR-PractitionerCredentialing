@@ -1,3 +1,29 @@
+//Profiles
+
+Profile: DQPSVPractitionerLegalAction
+Parent: Practitioner
+Id: DQ-PSV-Practitioner-Legal-Action
+Title: "Data Quality and Primary Source Verfication Practitioner"
+* extension contains LegalAction named legalAction 0..1
+* extension contains PrimarySource named primarySource 0..1
+
+
+Profile: DQPSVMalpracticeCliam
+Parent: Claim
+Id: DQ-PSV-malpractice-claim
+* extension contains PrimarySource named primarySource 0..1
+
+Profile: DQPSVSanction
+Parent: Consent
+Id: DQ-PSV-santion
+* extension contains PrimarySource named primarySource 0..1
+
+Profile: DQPSVWorkHistory
+Parent: PractitionerRole
+* extension contains PrimarySource named primarySource 0..1
+
+
+//Extensions
 Extension: LegalAction
 Id: legal-action
 Title: "Extension : Practitioner Work History"
@@ -29,27 +55,7 @@ Description: "Primary Source Verification Information"
 * extension[lastPublished] ^short = "lastpublished"
 * extension[lastPublished].value[x] only dateTime
 
-Profile: DQPSVPractitionerLegalAction
-Parent: Practitioner
-Id: DQ-PSV-Practitioner-Legal-Action
-Title: "Data Quality and Primary Source Verfication Practitioner"
-* extension contains LegalAction named legalAction 0..1
-* extension contains PrimarySource named primarySource 0..1
-
-
-Profile: DQPSVMalpracticeCliam
-Parent: Claim
-Id: DQ-PSV-malpractice-claim
-* extension contains PrimarySource named primarySource 0..1
-
-Profile: DQPSVSanction
-Parent: Consent
-Id: DQ-PSV-santion
-* extension contains PrimarySource named primarySource 0..1
-
-Profile: DQPSVWorkHistory
-Parent: PractitionerRole
-* extension contains PrimarySource named primarySource 0..1
+//Examples
 
 Instance: MockedCliamPatient
 InstanceOf: Patient
@@ -63,11 +69,11 @@ Usage: #example
 * identifier.use = #offical
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA90"
 
-Instance: InsuranceCoverage
+Instance: MalpracticeInsuranceCoverage
 InstanceOf: Coverage
 Usage: #example
 * identifier.use = #offical
-* identifier.type = #insurancecoverage
+* identifier.type = #malpracticeinsurancecoverage
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
 * status = #active
 * payor = Reference(MalpracticeProviderOrganization)
@@ -88,7 +94,7 @@ Usage: #example
 * provider = Reference(MalpracticeProviderOrganization)
 * insurance.sequence = 1
 * insurance.focal = false
-* insurance.coverage = Reference(InsuranceCoverage)
+* insurance.coverage = Reference(MalpracticeInsuranceCoverage)
 * extension[primarySource].extension[url].valueString = "http://example.url.com/Malpractice/claims"
 * extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
 
@@ -164,7 +170,7 @@ Usage: #example
 * qualification[=].issuer = Reference(QulificationTrainingOrganization)
 
 
-//WorkHISTORY
+//Work History using HISTORY
 
 Instance: Employer0
 InstanceOf: Organization
@@ -251,12 +257,16 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:c418c853-bf5e-47e1-8889-fb76d3997e7e"
 * entry[=].resource = QulificationTrainingOrganization
 
+//Legal Actions
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-PSOD8YFAYTS"
+//Sanction
 * entry[=].resource = Sanction-vhdir-restriction
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-SD7A607607W"
+// Malpractice claim
 * entry[=].resource = MalpracticeClaim1
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-7ADYA78TA7T"
-* entry[=].resource = InsuranceCoverage
+//Malpractice Coverage
+* entry[=].resource = MalpracticeInsuranceCoverage
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
 * entry[=].resource = MockMalpracticeProviderOrganization
 * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-SD6AA765A657"
