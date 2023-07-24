@@ -1,12 +1,13 @@
 Instance: MalpracticeInsuranceCoverage
 InstanceOf: DQPSVMalpracticeCoverage
 Usage: #example
+Description: "Example: Malpractice Coverage"
 * id = "MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"
 * identifier.use = #official
 * identifier.type = #malpracticeinsurancecoverage
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
 * status = #active
-* payor = Reference(MalpracticeProviderOrganization)
+* payor = Reference(MockMalpracticeProviderOrganization)
 * beneficiary = Reference(MockedCliamPatient)
 * period.start = "1990-01-01"
 * period.end = "2025-01-01"
@@ -20,6 +21,7 @@ Usage: #example
 Instance: MalpracticeClaim1
 InstanceOf: DQPSVMalpracticeCliam
 Usage: #example
+Description: "Example: Malpractice Claim"
 * id = "MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"
 * identifier.use = #official
 * identifier.type = #malpractice
@@ -34,14 +36,15 @@ Usage: #example
 * insurance.sequence = 1
 * insurance.focal = false
 * insurance.coverage = Reference(MalpracticeInsuranceCoverage)
-* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/Malpractice/claims"
-* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
-* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
+//* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/Malpractice/claims"
+//* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+//* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
 
 
 Instance: Sanction-vhdir-restriction
 InstanceOf: DQPSVSanction
 Usage: #example
+Description: "Example: Sanction"
 * id = "Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * identifier.use = #official
 * identifier.type = #sanction

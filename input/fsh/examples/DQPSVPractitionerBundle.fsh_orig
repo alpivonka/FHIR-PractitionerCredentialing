@@ -1,5 +1,5 @@
 //Resource Bundle
-Instance: DQPSVPractitionerLegalActionResourceBundle
+Instance: DQPSVPractitionerResourceBundle
 InstanceOf: Bundle
 Usage: #example
 * id = "ResourceBundle-ba91c64b-f30c-4137-a484-34bbba5e8804"

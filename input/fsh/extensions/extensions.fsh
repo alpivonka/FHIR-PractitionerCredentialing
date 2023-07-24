@@ -24,9 +24,13 @@ Title: "Extension : Primary Source Verification Information"
 Description: "Primary Source Verification Information"
 * ^context[+].type = #element
 * ^context[=].expression = "Practitioner"
+* ^context[+].type = #element
 * ^context[=].expression = "Coverage"
+* ^context[+].type = #element
 * ^context[=].expression = "Claim"
+* ^context[+].type = #element
 * ^context[=].expression = "Consent"
+* ^context[+].type = #element
 * ^context[=].expression = "PractitionerRole"
 * extension contains
    verificationURL 0..1 and 

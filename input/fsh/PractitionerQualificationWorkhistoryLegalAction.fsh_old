@@ -1,5 +1,5 @@
 //Profiles
-Profile: DQPSVPractitionerLegalAction
+Profile: DQPSVPractitioner
 Parent: Practitioner
 Id: DQ-PSV-Practitioner-Legal-Action
 Title: "Data Quality and Primary Source Verfication Practitioner"
@@ -101,7 +101,7 @@ Usage: #example
 * identifier.type = #malpracticeinsurancecoverage
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
 * status = #active
-* payor = Reference(MalpracticeProviderOrganization)
+* payor = Reference(MockMalpracticeProviderOrganization)
 * beneficiary = Reference(MockedCliamPatient)
 * period.start = "1990-01-01"
 * period.end = "2025-01-01"
@@ -180,7 +180,7 @@ Usage: #example
 
 
 Instance: thePractitioner
-InstanceOf: DQPSVPractitionerLegalAction
+InstanceOf: DQPSVPractitioner
 Usage: #example
 * id = "thePractitioner-8bd279af-125a-4318-b461-sda0867067s"
 * identifier[+].use = #official
@@ -300,7 +300,7 @@ Usage: #example
 
 
 //Resource Bundle
-Instance: DQPSVPractitionerLegalActionResourceBundle
+Instance: DQPSVPractitionerResourceBundle
 InstanceOf: Bundle
 Usage: #example
 * id = "ResourceBundle-ba91c64b-f30c-4137-a484-34bbba5e8804"

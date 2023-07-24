@@ -1,5 +1,5 @@
 Instance: thePractitioner
-InstanceOf: DQPSVPractitionerLegalAction
+InstanceOf: DQPSVPractitioner
 Usage: #example
 * id = "thePractitioner-8bd279af-125a-4318-b461-sda0867067s"
 * identifier[+].use = #official
