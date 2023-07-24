@@ -7,10 +7,10 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
+id: ncqa-credentialing-dq-psv
 canonical: http://example.com/fhir/example
 url: http://example.com/fhir/example
-name: ExampleIG
+name: Credentialing-DQ-PSV
 title: "HL7 FHIR Implementation Guide: Example IG Release 1 - US Realm | STU1"
 description: Example IG exercises many of the fields in a SUSHI configuration.
 status: active
@@ -22,6 +22,7 @@ version: 1.0.0
 # it can be a single item OR and array here (but so far SUSHI only
 # supports 4.0.1 anyway).
 fhirVersion: 4.0.1
+#fhirVersion: 5.0.0-snapshot3
 
 # The following two lines correspond to items that used to be in
 # ig.ini but were moved to IG.definition.parameter. For
@@ -37,17 +38,17 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: My Organization 
-  url: http://example.com/committees
-  email: my-group@example.com
+  name: NCQA
+  url: http://ncqa.org
+ # email: my-group@example.com
 
 # ContactDetail is required by the template.
-contact:
-  - name: Bob Smith
-    telecom:
-      - system: email
-        value: bobsmith@example.com
-        use: work
+#contact:
+#  - name: Bob Smith
+#    telecom:
+#      - system: email
+#        value: bobsmith@example.com
+#        use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
 # code syntax can be used here.
@@ -60,7 +61,7 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for `uri` and `version`.
 #dependencies:
-hl7.fhir.us.core: 3.2.0
+#  hl7.fhir.us.core: 3.2.0
 #  hl7.fhir.us.mcode:
 #    id: mcode
 #    uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
