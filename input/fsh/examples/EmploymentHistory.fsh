@@ -3,7 +3,7 @@ Instance: Employer0
 InstanceOf: Organization
 Usage: #example
 * id = "Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
 * name = "Hospital employer"
 
@@ -13,7 +13,7 @@ Instance: Employer1
 InstanceOf: Organization
 Usage: #example
 * id = "Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "7f1dd829-db66-4312-a6a2-46283ad29f27"
 * name = "Hospital employer"
 
@@ -22,7 +22,7 @@ Instance: Employer2
 InstanceOf: Organization
 Usage: #example
 * id = "Employer2-4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
 * name = "Hospital employer"
 

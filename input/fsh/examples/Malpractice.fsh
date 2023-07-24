@@ -2,7 +2,7 @@ Instance: MalpracticeInsuranceCoverage
 InstanceOf: DQPSVMalpracticeCoverage
 Usage: #example
 * id = "MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.type = #malpracticeinsurancecoverage
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
 * status = #active
@@ -21,7 +21,7 @@ Instance: MalpracticeClaim1
 InstanceOf: DQPSVMalpracticeCliam
 Usage: #example
 * id = "MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.type = #malpractice
 * identifier.value = "8bd279af-125a-4318-b461-SD7A607607W"
 * status = #active
@@ -43,7 +43,7 @@ Instance: Sanction-vhdir-restriction
 InstanceOf: DQPSVSanction
 Usage: #example
 * id = "Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.type = #sanction
 * identifier.value = "8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * status = #active

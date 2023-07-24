@@ -2,7 +2,7 @@ Instance: thePractitioner
 InstanceOf: DQPSVPractitionerLegalAction
 Usage: #example
 * id = "thePractitioner-8bd279af-125a-4318-b461-sda0867067s"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "8bd279af-125a-4318-b461-sda0867067s"
 * name.family = "Doe"
 * name.given = "John"

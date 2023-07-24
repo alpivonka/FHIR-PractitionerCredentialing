@@ -74,14 +74,14 @@ Instance: MockedCliamPatient
 InstanceOf: Patient
 Usage: #example
 * id = "MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78T7890"
 
 Instance: MockMalpracticeProviderOrganization
 InstanceOf: Organization
 Usage: #example
 * id = "MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA90"
 
 Instance: PrimarySourceOrganization
@@ -89,7 +89,7 @@ InstanceOf: Organization
 Usage: #example
 * id = "PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002"
 * name = "PrimarySource Organization"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.value = "f8881e4c-272a-11ee-be56-0242ac120002"
 
 //Examples
@@ -97,7 +97,7 @@ Instance: MalpracticeInsuranceCoverage
 InstanceOf: DQPSVMalpracticeCoverage
 Usage: #example
 * id = "MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.type = #malpracticeinsurancecoverage
 * identifier.value = "8bd279af-125a-4318-b461-7ADYA78TA7T"
 * status = #active
@@ -116,7 +116,7 @@ Instance: MalpracticeClaim1
 InstanceOf: DQPSVMalpracticeCliam
 Usage: #example
 * id = "MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.type = #malpractice
 * identifier.value = "8bd279af-125a-4318-b461-SD7A607607W"
 * status = #active
@@ -138,7 +138,7 @@ Instance: Sanction-vhdir-restriction
 InstanceOf: DQPSVSanction
 Usage: #example
 * id = "Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.type = #sanction
 * identifier.value = "8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * status = #active
@@ -157,7 +157,7 @@ Instance: QulificationDEAOrganization
 InstanceOf: Organization
 Usage: #example
 * id = "QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.value = "fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
 * name = "DEA"
 
@@ -165,7 +165,7 @@ Instance: QulificationDCSOrganization
 InstanceOf: Organization
 Usage: #example
 * id = "QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.value = "25560a5d-1c71-4af2-86a6-46acb9daa102"
 * name = "DCS-Florida"
 
@@ -174,7 +174,7 @@ Instance: QulificationTrainingOrganization
 InstanceOf: Organization
 Usage: #example
 * id = "QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e"
-* identifier.use = #offical
+* identifier.use = #official
 * identifier.value = "c418c853-bf5e-47e1-8889-fb76d3997e7e"
 * name = "We-Train-Docs"
 
@@ -183,7 +183,7 @@ Instance: thePractitioner
 InstanceOf: DQPSVPractitionerLegalAction
 Usage: #example
 * id = "thePractitioner-8bd279af-125a-4318-b461-sda0867067s"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "8bd279af-125a-4318-b461-sda0867067s"
 * name.family = "Doe"
 * name.given = "John"
@@ -226,7 +226,7 @@ Instance: Employer0
 InstanceOf: Organization
 Usage: #example
 * id = "Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "73e9266d-aadf-4c7f-9d3c-731c913e6d2b"
 * name = "Hospital employer"
 
@@ -236,7 +236,7 @@ Instance: Employer1
 InstanceOf: Organization
 Usage: #example
 * id = "Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "7f1dd829-db66-4312-a6a2-46283ad29f27"
 * name = "Hospital employer"
 
@@ -245,7 +245,7 @@ Instance: Employer2
 InstanceOf: Organization
 Usage: #example
 * id = "Employer2-4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
-* identifier[+].use = #offical
+* identifier[+].use = #official
 * identifier[=].id = "4efcf928-2b65-4c9a-b9d7-8a4ee22b5625"
 * name = "Hospital employer"
 
