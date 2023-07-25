@@ -48,7 +48,7 @@ Description: "Example: Sanction"
 * id = "Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * identifier.use = #official
 * identifier.type = #sanction
-* identifier.value = "8bd279af-125a-4318-b461-PSOD8YFAYTS"
+//* identifier.value = "http://example.com/fhir/sanction/8bd279af-125a-4318-b461-PSOD8YFAYTS"
 * status = #active
 * scope = #sanction
 * category = #saction
@@ -59,3 +59,4 @@ Description: "Example: Sanction"
 * provision.action = #morningRounds
 * provision.actor[+].reference = Reference(thePractitioner)
 * provision.actor[=].role = #doctor
+* policyRule = #sanction
