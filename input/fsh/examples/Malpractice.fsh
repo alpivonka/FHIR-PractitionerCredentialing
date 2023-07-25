@@ -36,9 +36,9 @@ Description: "Example: Malpractice Claim"
 * insurance.sequence = 1
 * insurance.focal = false
 * insurance.coverage = Reference(MalpracticeInsuranceCoverage)
-//* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/Malpractice/claims"
-//* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
-//* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
+* extension[primarySource].extension[verificationURL].valueString = "http://example.url.com/Malpractice/claims"
+* extension[primarySource].extension[lastPublished].valueDateTime = "2023-01-01"
+* extension[primarySource].extension[who].valueReference = Reference(PrimarySourceOrganization)
 
 
 Instance: Sanction-vhdir-restriction
