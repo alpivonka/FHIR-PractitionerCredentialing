@@ -6,7 +6,7 @@ This is an empty IG
 ### Publication
 This ImplementationGuide is published in the following locations:
 
-Continuous Build: __[http://build.fhir.org/ig/openhie/fhir-ig-empty/branches/main/index.html](https://alpivonka.github.io/FHIR-PractitionerCredentialing/)__  
+Continuous Build: __https://alpivonka.github.io/FHIR-PractitionerCredentialing/__  
 Canonical / permanent URL: 
 <br> </br>
 
