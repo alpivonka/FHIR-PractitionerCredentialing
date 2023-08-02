@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b&quot; </p></div><p><b>identifier</b>: id:\u00a0?ngen-9?\u00a0(use:\u00a0OFFICIAL)</p><p><b>name</b>: Hospital employer</p></div>"
+  },
+  "identifier" : [{
+    "id" : "73e9266d-aadf-4c7f-9d3c-731c913e6d2b",
+    "use" : "official"
+  }],
+  "name" : "Hospital employer"
+}

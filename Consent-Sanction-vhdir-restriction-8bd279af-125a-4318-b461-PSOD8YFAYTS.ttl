@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/example/Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS> a fhir:Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://example.com/fhir/example/StructureDefinition/DQ-PSV-santion"^^xsd:anyURI ;
+       fhir:link <http://example.com/fhir/example/StructureDefinition/DQ-PSV-santion>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Consent</b><a name=\"Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Consent &quot;Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DQ-PSV-santion.html\">DQPSVSanction</a></p></div><blockquote><p><b>Extension : Primary Source Verification Information</b></p><blockquote><p><b>url</b></p><code>verificationURL</code></blockquote><p><b>value</b>: http://example.url.com/sanctions</p><blockquote><p><b>url</b></p><code>lastPublished</code></blockquote><p><b>value</b>: 2023-01-01</p><blockquote><p><b>url</b></p><code>who</code></blockquote><p><b>value</b>: <a href=\"Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.html\">Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002</a> &quot;PrimarySource Organization&quot;</p></blockquote><p><b>identifier</b>: sanction: ?ngen-9? (use: OFFICIAL)</p><p><b>status</b>: active</p><p><b>scope</b>: sanction <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#sanction)</span></p><p><b>category</b>: saction <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#saction)</span></p><p><b>policyRule</b>: sanction <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#sanction)</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: deny</p><h3>Actors</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Role</b></td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td>doctor <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#doctor)</span></td><td><a href=\"Practitioner-thePractitioner-8bd279af-125a-4318-b461-sda0867067s.html\">Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s</a> &quot; DOE&quot;</td></tr></table><p><b>action</b>: morningRounds <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#morningRounds)</span></p></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "verificationURL"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "http://example.url.com/sanctions" ]
+     ] [
+       fhir:url [ fhir:v "lastPublished"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2023-01-01"^^xsd:date ]
+     ] [
+       fhir:url [ fhir:v "who"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://example.com/fhir/example/Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002> ;
+         fhir:reference [ fhir:v "Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002" ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "http://example.com/fhir/example/StructureDefinition/primary-source"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "sanction" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:scope [
+     fhir:coding ( [
+       fhir:code [ fhir:v "sanction" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:code [ fhir:v "saction" ]
+     ] )
+  ] ) ; # 
+  fhir:policyRule [
+     fhir:coding ( [
+       fhir:code [ fhir:v "sanction" ]
+     ] )
+  ] ; # 
+  fhir:provision [
+     fhir:type [ fhir:v "deny" ] ;
+     fhir:actor ( [
+       fhir:role [
+         fhir:coding ( [
+           fhir:code [ fhir:v "doctor" ]
+         ] )
+       ] ;
+       fhir:reference [
+         fhir:link <http://example.com/fhir/example/Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s> ;
+         fhir:reference [ fhir:v "Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s" ]
+       ]
+     ] ) ;
+     fhir:action ( [
+       fhir:coding ( [
+         fhir:code [ fhir:v "morningRounds" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

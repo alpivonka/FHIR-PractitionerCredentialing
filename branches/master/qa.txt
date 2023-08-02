@@ -1,0 +1,87 @@
+﻿CredentialingDQPSV : Validation Results
+=========================================
+
+err = 1, warn = 27, info = 0
+IG Publisher Version: 1.3.25
+Generated Wed Aug 02 19:15:03 UTC 2023. FHIR version 4.0.1 for NCQACredentialingDQPSV#1.0.0 (canonical = http://example.com/fhir/example)
+ Build Errors : 0 / 10 / 0
+ /github/workspace/fsh-generated/resources/Claim-MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/Consent-Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS : 0 / 6 / 1
+ /github/workspace/fsh-generated/resources/Coverage-MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-NCQACredentialingDQPSV : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Employer2-4efcf928-2b65-4c9a-b9d7-8a4ee22b5625 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Practitioner-thePractitioner-8bd279af-125a-4318-b461-sda0867067s : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/PractitionerRole-WorkHistory-62536813-4dad-48ce-aac2-5b88abdaa913 : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/PractitionerRole-WorkHistory0-3a9730f6-b0ff-470b-919b-e555057c5c5c : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/PractitionerRole-WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-DQ-PSV-Practitioner-Legal-Action : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-DQ-PSV-malpractice-claim : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-DQ-PSV-malpractice-coverage : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-DQ-PSV-santion : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-legal-action : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-malpractice-coverage : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-practitionerRole : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-primary-source : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/DQ-PSV-malpractice-claim.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/DQ-PSV-malpractice-coverage.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/DQ-PSV-santion.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/practitionerRole.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/DQ-PSV-Practitioner-Legal-Action.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Claim-MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W.json ==
+WARNING: Claim/MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W: Claim.identifier[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Claim/MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W: Claim.type.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Claim/MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W: Claim.priority.coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/Consent-Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS.json ==
+WARNING: Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS: Consent.identifier[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS: Consent.scope.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS: Consent.category[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS: Consent.policyRule.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS: Consent.provision.actor[0].role.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS: Consent.provision.action[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/Coverage-MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T.json ==
+WARNING: Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T: Coverage.identifier[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T: Coverage.class[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/ImplementationGuide-NCQACredentialingDQPSV.json ==
+== fsh-generated/resources/Organization-Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b.json ==
+== fsh-generated/resources/Organization-Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27.json ==
+== fsh-generated/resources/Organization-Employer2-4efcf928-2b65-4c9a-b9d7-8a4ee22b5625.json ==
+== fsh-generated/resources/Organization-MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90.json ==
+== fsh-generated/resources/Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.json ==
+== fsh-generated/resources/Organization-QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e.json ==
+== fsh-generated/resources/Organization-QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102.json ==
+== fsh-generated/resources/Organization-QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21.json ==
+== fsh-generated/resources/Patient-MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890.json ==
+== fsh-generated/resources/Practitioner-thePractitioner-8bd279af-125a-4318-b461-sda0867067s.json ==
+WARNING: Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s: Practitioner.qualification[0].code.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s: Practitioner.qualification[1].code.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s: Practitioner.qualification[2].code.coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/PractitionerRole-WorkHistory-62536813-4dad-48ce-aac2-5b88abdaa913.json ==
+WARNING: PractitionerRole/WorkHistory-62536813-4dad-48ce-aac2-5b88abdaa913: PractitionerRole.code[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/PractitionerRole-WorkHistory0-3a9730f6-b0ff-470b-919b-e555057c5c5c.json ==
+WARNING: PractitionerRole/WorkHistory0-3a9730f6-b0ff-470b-919b-e555057c5c5c: PractitionerRole.code[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/PractitionerRole-WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a.json ==
+WARNING: PractitionerRole/WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a: PractitionerRole.code[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/StructureDefinition-DQ-PSV-Practitioner-Legal-Action.json ==
+== fsh-generated/resources/StructureDefinition-DQ-PSV-malpractice-claim.json ==
+== fsh-generated/resources/StructureDefinition-DQ-PSV-malpractice-coverage.json ==
+== fsh-generated/resources/StructureDefinition-DQ-PSV-santion.json ==
+ERROR: StructureDefinition/DQ-PSV-santion: StructureDefinition.snapshot.element[10].example[0].value.ofType(Identifier): if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'Local eCMS identifier'
+== fsh-generated/resources/StructureDefinition-legal-action.json ==
+== fsh-generated/resources/StructureDefinition-malpractice-coverage.json ==
+== fsh-generated/resources/StructureDefinition-practitionerRole.json ==
+== fsh-generated/resources/StructureDefinition-primary-source.json ==

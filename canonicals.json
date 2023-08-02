@@ -1,0 +1,65 @@
+[
+  {
+    "id" : "NCQACredentialingDQPSV",
+    "type" : "ImplementationGuide",
+    "url" : "http://example.com/fhir/example/ImplementationGuide/NCQACredentialingDQPSV",
+    "version" : "1.0.0",
+    "name" : "CredentialingDQPSV"
+  },
+  {
+    "id" : "DQ-PSV-Practitioner-Legal-Action",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/DQ-PSV-Practitioner-Legal-Action",
+    "version" : "1.0.0",
+    "name" : "DQPSVPractitioner"
+  },
+  {
+    "id" : "DQ-PSV-malpractice-claim",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/DQ-PSV-malpractice-claim",
+    "version" : "1.0.0",
+    "name" : "DQPSVMalpracticeCliam"
+  },
+  {
+    "id" : "DQ-PSV-malpractice-coverage",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/DQ-PSV-malpractice-coverage",
+    "version" : "1.0.0",
+    "name" : "DQPSVMalpracticeCoverage"
+  },
+  {
+    "id" : "DQ-PSV-santion",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/DQ-PSV-santion",
+    "version" : "1.0.0",
+    "name" : "DQPSVSanction"
+  },
+  {
+    "id" : "legal-action",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/legal-action",
+    "version" : "1.0.0",
+    "name" : "LegalAction"
+  },
+  {
+    "id" : "malpractice-coverage",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/malpractice-coverage",
+    "version" : "1.0.0",
+    "name" : "MalpracticeCoverage"
+  },
+  {
+    "id" : "practitionerRole",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/practitionerRole",
+    "version" : "1.0.0",
+    "name" : "DQPSVWorkHistory"
+  },
+  {
+    "id" : "primary-source",
+    "type" : "StructureDefinition",
+    "url" : "http://example.com/fhir/example/StructureDefinition/primary-source",
+    "version" : "1.0.0",
+    "name" : "PrimarySource"
+  }
+]

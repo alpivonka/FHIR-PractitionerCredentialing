@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27&quot; </p></div><p><b>identifier</b>: id: ?ngen-9? (use: OFFICIAL)</p><p><b>name</b>: Hospital employer</p></div>
+  </text>
+  <identifier id="7f1dd829-db66-4312-a6a2-46283ad29f27">
+    <use value="official"/>
+  </identifier>
+  <name value="Hospital employer"/>
+</Organization>

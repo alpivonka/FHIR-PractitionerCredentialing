@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/DQ-PSV-malpractice-coverage"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Coverage</b><a name="MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Coverage &quot;MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-DQ-PSV-malpractice-coverage.html">DQPSVMalpracticeCoverage</a></p></div><blockquote><p><b>Extension : Primary Source Verification Information</b></p><blockquote><p><b>url</b></p><code>verificationURL</code></blockquote><p><b>value</b>: http://example.url.com/Malpractice/coverage</p><blockquote><p><b>url</b></p><code>lastPublished</code></blockquote><p><b>value</b>: 2023-01-01</p><blockquote><p><b>url</b></p><code>who</code></blockquote><p><b>value</b>: <a href="Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.html">Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002</a> &quot;PrimarySource Organization&quot;</p></blockquote><p><b>identifier</b>: malpracticeinsurancecoverage: 8bd279af-125a-4318-b461-7ADYA78TA7T (use: OFFICIAL)</p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href="Patient-MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890.html">Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890</a></p><p><b>period</b>: 1990-01-01 --&gt; 2025-01-01</p><p><b>payor</b>: <a href="Organization-MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90.html">Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90</a></p><h3>Classes</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td>malpracticeCoverage <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#malpracticeCoverage)</span></td><td>PolicyNumber: 667fd5a95a5</td><td>Medical Malpractice Insurance Mutual of Omaha</td></tr></table></div>
+  </text>
+  <extension url="http://example.com/fhir/example/StructureDefinition/primary-source">
+    <extension url="verificationURL">
+      <valueString value="http://example.url.com/Malpractice/coverage"/>
+    </extension>
+    <extension url="lastPublished">
+      <valueDateTime value="2023-01-01"/>
+    </extension>
+    <extension url="who">
+      <valueReference>
+        <reference value="Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <code value="malpracticeinsurancecoverage"/>
+      </coding>
+    </type>
+    <value value="8bd279af-125a-4318-b461-7ADYA78TA7T"/>
+  </identifier>
+  <status value="active"/>
+  <beneficiary>
+    <reference value="Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890"/>
+  </beneficiary>
+  <period>
+    <start value="1990-01-01"/>
+    <end value="2025-01-01"/>
+  </period>
+  <payor>
+    <reference value="Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90"/>
+  </payor>
+  <class>
+    <type>
+      <coding>
+        <code value="malpracticeCoverage"/>
+      </coding>
+    </type>
+    <value value="PolicyNumber: 667fd5a95a5"/>
+    <name value="Medical Malpractice Insurance Mutual of Omaha"/>
+  </class>
+</Coverage>

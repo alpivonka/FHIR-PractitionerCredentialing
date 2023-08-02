@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/DQ-PSV-malpractice-claim"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Claim</b><a name="MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Claim &quot;MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-DQ-PSV-malpractice-claim.html">DQPSVMalpracticeCliam</a></p></div><blockquote><p><b>Extension : Primary Source Verification Information</b></p><blockquote><p><b>url</b></p><code>verificationURL</code></blockquote><p><b>value</b>: http://example.url.com/Malpractice/claims</p><blockquote><p><b>url</b></p><code>lastPublished</code></blockquote><p><b>value</b>: 2023-01-01</p><blockquote><p><b>url</b></p><code>who</code></blockquote><p><b>value</b>: <a href="Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.html">Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002</a> &quot;PrimarySource Organization&quot;</p></blockquote><p><b>identifier</b>: malpractice: 8bd279af-125a-4318-b461-SD7A607607W (use: OFFICIAL)</p><p><b>status</b>: active</p><p><b>type</b>: malpractice <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#malpractice)</span></p><p><b>use</b>: claim</p><p><b>patient</b>: <a href="Patient-MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890.html">Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890</a></p><p><b>created</b>: 2000-12-19</p><p><b>provider</b>: <a href="Organization-MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90.html">Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90</a></p><p><b>priority</b>: normal <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#normal)</span></p><h3>Insurances</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td style="display: none">*</td><td>1</td><td>false</td><td><a href="Coverage-MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T.html">Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T</a></td></tr></table></div>
+  </text>
+  <extension url="http://example.com/fhir/example/StructureDefinition/primary-source">
+    <extension url="verificationURL">
+      <valueString value="http://example.url.com/Malpractice/claims"/>
+    </extension>
+    <extension url="lastPublished">
+      <valueDateTime value="2023-01-01"/>
+    </extension>
+    <extension url="who">
+      <valueReference>
+        <reference value="Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <code value="malpractice"/>
+      </coding>
+    </type>
+    <value value="8bd279af-125a-4318-b461-SD7A607607W"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <code value="malpractice"/>
+    </coding>
+  </type>
+  <use value="claim"/>
+  <patient>
+    <reference value="Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890"/>
+  </patient>
+  <created value="2000-12-19"/>
+  <provider>
+    <reference value="Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90"/>
+  </provider>
+  <priority>
+    <coding>
+      <code value="normal"/>
+    </coding>
+  </priority>
+  <insurance>
+    <sequence value="1"/>
+    <focal value="false"/>
+    <coverage>
+      <reference value="Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"/>
+    </coverage>
+  </insurance>
+</Claim>

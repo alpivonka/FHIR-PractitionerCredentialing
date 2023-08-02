@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.com/fhir/example/Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://example.com/fhir/example/StructureDefinition/DQ-PSV-malpractice-coverage"^^xsd:anyURI ;
+       fhir:link <http://example.com/fhir/example/StructureDefinition/DQ-PSV-malpractice-coverage>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Coverage</b><a name=\"MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Coverage &quot;MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DQ-PSV-malpractice-coverage.html\">DQPSVMalpracticeCoverage</a></p></div><blockquote><p><b>Extension : Primary Source Verification Information</b></p><blockquote><p><b>url</b></p><code>verificationURL</code></blockquote><p><b>value</b>: http://example.url.com/Malpractice/coverage</p><blockquote><p><b>url</b></p><code>lastPublished</code></blockquote><p><b>value</b>: 2023-01-01</p><blockquote><p><b>url</b></p><code>who</code></blockquote><p><b>value</b>: <a href=\"Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.html\">Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002</a> &quot;PrimarySource Organization&quot;</p></blockquote><p><b>identifier</b>: malpracticeinsurancecoverage: 8bd279af-125a-4318-b461-7ADYA78TA7T (use: OFFICIAL)</p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"Patient-MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890.html\">Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890</a></p><p><b>period</b>: 1990-01-01 --&gt; 2025-01-01</p><p><b>payor</b>: <a href=\"Organization-MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90.html\">Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90</a></p><h3>Classes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td>malpracticeCoverage <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#malpracticeCoverage)</span></td><td>PolicyNumber: 667fd5a95a5</td><td>Medical Malpractice Insurance Mutual of Omaha</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "verificationURL"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "http://example.url.com/Malpractice/coverage" ]
+     ] [
+       fhir:url [ fhir:v "lastPublished"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2023-01-01"^^xsd:date ]
+     ] [
+       fhir:url [ fhir:v "who"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://example.com/fhir/example/Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002> ;
+         fhir:reference [ fhir:v "Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002" ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "http://example.com/fhir/example/StructureDefinition/primary-source"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "malpracticeinsurancecoverage" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "8bd279af-125a-4318-b461-7ADYA78TA7T" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:beneficiary [
+     fhir:link <http://example.com/fhir/example/Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890> ;
+     fhir:reference [ fhir:v "Patient/MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "1990-01-01"^^xsd:date ] ;
+     fhir:end [ fhir:v "2025-01-01"^^xsd:date ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:link <http://example.com/fhir/example/Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90> ;
+     fhir:reference [ fhir:v "Organization/MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90" ]
+  ] ) ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "malpracticeCoverage" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "PolicyNumber: 667fd5a95a5" ] ;
+     fhir:name [ fhir:v "Medical Malpractice Insurance Mutual of Omaha" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

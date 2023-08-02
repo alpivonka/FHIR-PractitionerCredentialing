@@ -1,0 +1,12 @@
+{
+  "resourceType" : "Organization",
+  "id" : "MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90&quot; </p></div><p><b>identifier</b>: id:\u00a08bd279af-125a-4318-b461-7ADYA78TA90\u00a0(use:\u00a0OFFICIAL)</p></div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "value" : "8bd279af-125a-4318-b461-7ADYA78TA90"
+  }]
+}

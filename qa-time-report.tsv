@@ -1,0 +1,26 @@
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-NCQACredentialingDQPSV.json	8211	-	0	0	0	1	0	0	6	1116	0	0	0	0	0	0	0	1	0	0	182	215	0	0	0	4	0	1
+fsh-generated/resources/StructureDefinition-legal-action.json	2117	300	0	0	0	0	0	770	0	780	0	0	1	0	0	0	0	1	0	0	133	2044	0	1	0	3	1	0
+fsh-generated/resources/Claim-MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W.json	1660	50	0	0	0	0	0	0	0	232	0	0	0	0	0	0	0	0	0	0	21	44	0	0	0	0	0	0
+fsh-generated/resources/Organization-Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27.json	237	3	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	6	10	0	0	0	0	0	0
+fsh-generated/resources/Practitioner-thePractitioner-8bd279af-125a-4318-b461-sda0867067s.json	3252	81	0	0	0	0	0	0	1	60	0	0	0	0	0	0	0	0	0	0	33	35	0	0	0	0	0	0
+fsh-generated/resources/PractitionerRole-WorkHistory-62536813-4dad-48ce-aac2-5b88abdaa913.json	1240	32	0	0	0	0	0	0	0	15	0	0	0	0	0	0	0	0	0	0	16	29	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-DQ-PSV-malpractice-coverage.json	1942	91	0	0	0	0	0	2200	0	2213	0	0	0	0	0	0	0	1	0	0	293	1748	0	0	0	6	0	1
+fsh-generated/resources/StructureDefinition-practitionerRole.json	1639	98	1	0	0	0	0	1780	0	1728	0	0	0	0	0	0	0	1	0	0	230	1028	0	0	0	5	0	0
+fsh-generated/resources/Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.json	265	3	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	6	9	0	0	0	0	0	0
+fsh-generated/resources/Organization-Employer0-73e9266d-aadf-4c7f-9d3c-731c913e6d2b.json	237	3	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	5	10	0	0	1	0	0	0
+fsh-generated/resources/PractitionerRole-WorkHistory0-3a9730f6-b0ff-470b-919b-e555057c5c5c.json	1264	34	0	0	0	0	0	0	0	15	0	0	0	0	0	0	0	0	0	0	16	17	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-malpractice-coverage.json	1602	168	0	0	0	0	0	407	0	369	0	0	0	0	0	0	0	0	0	0	58	217	0	0	0	2	0	0
+fsh-generated/resources/StructureDefinition-DQ-PSV-malpractice-claim.json	1500	96	0	0	0	0	0	7249	0	6928	0	0	6	0	0	0	0	2	0	0	817	4077	0	0	0	20	0	3
+fsh-generated/resources/Organization-Employer2-4efcf928-2b65-4c9a-b9d7-8a4ee22b5625.json	237	3	0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	6	9	0	0	0	0	0	0
+fsh-generated/resources/PractitionerRole-WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a.json	1266	31	0	0	0	0	0	0	0	24	0	0	0	0	0	0	0	0	0	0	15	15	0	0	0	0	0	0
+fsh-generated/resources/Consent-Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS.json	1690	33	0	0	0	0	0	0	1	110	0	0	0	0	0	0	0	0	0	0	20	28	0	0	0	0	0	0
+fsh-generated/resources/Patient-MockedCliamPatient-8bd279af-125a-4318-b461-7ADYA78T7890.json	213	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	5	10	0	0	0	0	0	0
+fsh-generated/resources/Organization-QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21.json	244	4	1	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	5	8	0	0	0	0	0	0
+fsh-generated/resources/Organization-MockMalpracticeOrganization-8bd279af-125a-4318-b461-7ADYA78TA90.json	225	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	5	7	0	0	0	0	0	0
+fsh-generated/resources/Organization-QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102.json	252	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	5	7	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-DQ-PSV-santion.json	1586	84	0	0	1	0	0	2876	0	2858	0	0	0	0	0	0	0	1	0	0	357	1454	0	0	0	7	0	0
+fsh-generated/resources/StructureDefinition-primary-source.json	3879	644	0	0	0	0	0	1607	0	1516	0	0	0	0	0	0	0	0	0	0	193	548	0	0	0	5	0	0
+fsh-generated/resources/Coverage-MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T.json	1622	31	0	0	0	0	0	0	0	99	0	0	0	0	0	0	0	0	0	0	18	23	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-DQ-PSV-Practitioner-Legal-Action.json	2523	164	0	0	0	0	0	1633	0	1556	0	0	0	0	0	0	0	1	0	0	207	749	0	0	0	5	0	1
+fsh-generated/resources/Organization-QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e.json	248	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	6	8	0	0	0	0	0	0

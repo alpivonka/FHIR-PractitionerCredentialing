@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21&quot; </p></div><p><b>identifier</b>: id: fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21 (use: OFFICIAL)</p><p><b>name</b>: DEA</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <value value="fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"/>
+  </identifier>
+  <name value="DEA"/>
+</Organization>

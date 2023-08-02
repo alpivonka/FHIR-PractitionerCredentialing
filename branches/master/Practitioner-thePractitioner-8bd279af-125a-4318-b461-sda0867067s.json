@@ -1,0 +1,112 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "thePractitioner-8bd279af-125a-4318-b461-sda0867067s",
+  "meta" : {
+    "profile" : ["http://example.com/fhir/example/StructureDefinition/DQ-PSV-Practitioner-Legal-Action"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"thePractitioner-8bd279af-125a-4318-b461-sda0867067s\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;thePractitioner-8bd279af-125a-4318-b461-sda0867067s&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-DQ-PSV-Practitioner-Legal-Action.html\">Data Quality and Primary Source Verfication Practitioner</a></p></div><blockquote><p><b>Extension : Practitioner Legal Actions</b></p><blockquote><p><b>url</b></p><code>action</code></blockquote><p><b>value</b>: <a href=\"Claim-MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W.html\">Claim/MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W</a></p><blockquote><p><b>url</b></p><code>action</code></blockquote><p><b>value</b>: <a href=\"Consent-Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS.html\">Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS</a></p></blockquote><p><b>Extension: proof of malpractice insurance coverage</b>: <a href=\"Coverage-MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T.html\">Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T</a></p><blockquote><p><b>Extension : Primary Source Verification Information</b></p><blockquote><p><b>url</b></p><code>verificationURL</code></blockquote><p><b>value</b>: http://example.url.com/practitioner</p><blockquote><p><b>url</b></p><code>lastPublished</code></blockquote><p><b>value</b>: 2023-01-01</p><blockquote><p><b>url</b></p><code>who</code></blockquote><p><b>value</b>: <a href=\"Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.html\">Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002</a> &quot;PrimarySource Organization&quot;</p></blockquote><p><b>identifier</b>: id:\u00a0?ngen-9?\u00a0(use:\u00a0OFFICIAL)</p><p><b>name</b>: John Doe </p><blockquote><p><b>qualification</b></p><p><b>identifier</b>: id:\u00a0DEA-NUMBER:8s997867585</p><p><b>code</b>: DEACertification <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#DEACertification)</span></p><p><b>period</b>: 2023-01-01 --&gt; 2025-01-01</p><p><b>issuer</b>: <a href=\"Organization-QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21.html\">Organization/QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21</a> &quot;DEA&quot;</p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: id:\u00a0DCS-NUMBER:sd098-a7a686</p><p><b>code</b>: DCSCertification <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#DCSCertification)</span></p><p><b>period</b>: 2023-01-01 --&gt; 2030-01-01</p><p><b>issuer</b>: <a href=\"Organization-QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102.html\">Organization/QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102</a> &quot;DCS-Florida&quot;</p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: id:\u00a0CPR-Training For Doctors 2020</p><p><b>code</b>: CPRTraining <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#CPRTraining)</span></p><p><b>period</b>: 2020-01-01 --&gt; 2050-01-01</p><p><b>issuer</b>: <a href=\"Organization-QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e.html\">Organization/QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e</a> &quot;We-Train-Docs&quot;</p></blockquote></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "action",
+      "valueReference" : {
+        "reference" : "Claim/MalpracticeClaim1-8bd279af-125a-4318-b461-SD7A607607W"
+      }
+    },
+    {
+      "url" : "action",
+      "valueReference" : {
+        "reference" : "Consent/Sanction-vhdir-restriction-8bd279af-125a-4318-b461-PSOD8YFAYTS"
+      }
+    }],
+    "url" : "http://example.com/fhir/example/StructureDefinition/legal-action"
+  },
+  {
+    "url" : "http://example.com/fhir/example/StructureDefinition/malpractice-coverage",
+    "valueReference" : {
+      "reference" : "Coverage/MalpracticeInsuranceCoverage-8bd279af-125a-4318-b461-7ADYA78TA7T"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "verificationURL",
+      "valueString" : "http://example.url.com/practitioner"
+    },
+    {
+      "url" : "lastPublished",
+      "valueDateTime" : "2023-01-01"
+    },
+    {
+      "url" : "who",
+      "valueReference" : {
+        "reference" : "Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002"
+      }
+    }],
+    "url" : "http://example.com/fhir/example/StructureDefinition/primary-source"
+  }],
+  "identifier" : [{
+    "id" : "8bd279af-125a-4318-b461-sda0867067s",
+    "use" : "official"
+  }],
+  "name" : [{
+    "family" : "Doe",
+    "given" : ["John"],
+    "prefix" : ["DO"]
+  }],
+  "qualification" : [{
+    "identifier" : [{
+      "id" : "f755ea67-6c33-4dc2-9a1d-6b480d9e558c",
+      "value" : "DEA-NUMBER:8s997867585"
+    }],
+    "code" : {
+      "coding" : [{
+        "code" : "DEACertification"
+      }]
+    },
+    "period" : {
+      "start" : "2023-01-01",
+      "end" : "2025-01-01"
+    },
+    "issuer" : {
+      "reference" : "Organization/QulificationDEAOrganization-fb34e0b9-c8d6-4f51-8ed3-9d6f3fbebd21"
+    }
+  },
+  {
+    "identifier" : [{
+      "id" : "af173c79-48dd-4edf-88e5-6062993477f0",
+      "value" : "DCS-NUMBER:sd098-a7a686"
+    }],
+    "code" : {
+      "coding" : [{
+        "code" : "DCSCertification"
+      }]
+    },
+    "period" : {
+      "start" : "2023-01-01",
+      "end" : "2030-01-01"
+    },
+    "issuer" : {
+      "reference" : "Organization/QulificationDCSOrganization-25560a5d-1c71-4af2-86a6-46acb9daa102"
+    }
+  },
+  {
+    "identifier" : [{
+      "id" : "0815108c-8b80-49b4-b4ee-cb42f1f2448e",
+      "value" : "CPR-Training For Doctors 2020"
+    }],
+    "code" : {
+      "coding" : [{
+        "code" : "CPRTraining"
+      }]
+    },
+    "period" : {
+      "start" : "2020-01-01",
+      "end" : "2050-01-01"
+    },
+    "issuer" : {
+      "reference" : "Organization/QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e"
+    }
+  }]
+}

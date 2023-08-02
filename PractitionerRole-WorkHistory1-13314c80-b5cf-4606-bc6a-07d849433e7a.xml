@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/practitionerRole"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PractitionerRole</b><a name="WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PractitionerRole &quot;WorkHistory1-13314c80-b5cf-4606-bc6a-07d849433e7a&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-practitionerRole.html">DQPSVWorkHistory</a></p></div><blockquote><p><b>Extension : Primary Source Verification Information</b></p><blockquote><p><b>url</b></p><code>verificationURL</code></blockquote><p><b>value</b>: http://example.url.com/workhistory</p><blockquote><p><b>url</b></p><code>lastPublished</code></blockquote><p><b>value</b>: 2023-01-01</p><blockquote><p><b>url</b></p><code>who</code></blockquote><p><b>value</b>: <a href="Organization-PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002.html">Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002</a> &quot;PrimarySource Organization&quot;</p></blockquote><p><b>identifier</b>: id: ?ngen-9? (use: OFFICIAL)</p><p><b>period</b>: 2001-01-01 --&gt; 2010-12-23</p><p><b>practitioner</b>: <a href="Practitioner-thePractitioner-8bd279af-125a-4318-b461-sda0867067s.html">Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s</a> &quot; DOE&quot;</p><p><b>organization</b>: <a href="Organization-Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27.html">Organization/Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27</a> &quot;Hospital employer&quot;</p><p><b>code</b>: 17561000 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#17561000)</span></p></div>
+  </text>
+  <extension url="http://example.com/fhir/example/StructureDefinition/primary-source">
+    <extension url="verificationURL">
+      <valueString value="http://example.url.com/workhistory"/>
+    </extension>
+    <extension url="lastPublished">
+      <valueDateTime value="2023-01-01"/>
+    </extension>
+    <extension url="who">
+      <valueReference>
+        <reference value="Organization/PrimarySourceOrganization-f8881e4c-272a-11ee-be56-0242ac120002"/>
+      </valueReference>
+    </extension>
+  </extension>
+  <identifier id="13314c80-b5cf-4606-bc6a-07d849433e7a">
+    <use value="official"/>
+  </identifier>
+  <period>
+    <start value="2001-01-01"/>
+    <end value="2010-12-23"/>
+  </period>
+  <practitioner>
+    <reference value="Practitioner/thePractitioner-8bd279af-125a-4318-b461-sda0867067s"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/Employer1-7f1dd829-db66-4312-a6a2-46283ad29f27"/>
+  </organization>
+  <code>
+    <coding>
+      <code value="17561000"/>
+    </coding>
+  </code>
+</PractitionerRole>

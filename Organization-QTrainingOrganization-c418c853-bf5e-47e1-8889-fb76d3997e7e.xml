@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;QTrainingOrganization-c418c853-bf5e-47e1-8889-fb76d3997e7e&quot; </p></div><p><b>identifier</b>: id: c418c853-bf5e-47e1-8889-fb76d3997e7e (use: OFFICIAL)</p><p><b>name</b>: We-Train-Docs</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <value value="c418c853-bf5e-47e1-8889-fb76d3997e7e"/>
+  </identifier>
+  <name value="We-Train-Docs"/>
+</Organization>
